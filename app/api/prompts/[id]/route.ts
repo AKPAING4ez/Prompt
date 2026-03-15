@@ -10,14 +10,15 @@ async function isAdmin(): Promise<boolean> {
 // DELETE /api/prompts/[id]
 export async function DELETE(
     _request: NextRequest,
-    { params }: { params: { id: string } }
+    context: { params: Promise<{ id: string }> }
 ) {
     if (!(await isAdmin())) {
         return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
     try {
-        await prisma.prompt.delete({ where: { id: params.id } });
+        const { id } = await context.params;
+        await prisma.prompt.delete({ where: { id } });
         return NextResponse.json({ success: true });
     } catch (error) {
         console.error('[DELETE /api/prompts/[id]]', error);
