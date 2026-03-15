@@ -1,0 +1,590 @@
+.page {
+    min-height: 100vh;
+    background: #0a0a0a;
+    color: #fff;
+}
+
+.splash {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    color: #39ff14;
+    background: #0a0a0a;
+}
+
+/* ─── Login ──────────────────────────── */
+.loginWrap {
+    min-height: 100vh;
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-image:
+        linear-gradient(rgba(57, 255, 20, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(57, 255, 20, 0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+.loginBox {
+    background: #12121a;
+    border: 3px solid #39ff14;
+    box-shadow: 4px 4px 0 #1a7a00, 0 0 40px rgba(57, 255, 20, 0.1);
+    width: 100%;
+    max-width: 420px;
+    overflow: hidden;
+}
+
+.loginHeader {
+    background: #070710;
+    border-bottom: 2px solid #1a1a2e;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dots {
+    display: flex;
+    gap: 6px;
+}
+
+.dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 0;
+    display: block;
+}
+
+.loginWindowTitle {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 7px;
+    color: #555;
+    margin-left: 6px;
+}
+
+.loginBody {
+    padding: 32px 28px;
+    text-align: center;
+}
+
+.loginIcon {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.loginTitle {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 14px;
+    color: #39ff14;
+    text-shadow: 0 0 12px rgba(57, 255, 20, 0.4);
+    margin-bottom: 6px;
+}
+
+.loginSub {
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 24px;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+
+/* ─── Header ───────────────────────────── */
+.header {
+    background: #070710;
+    border-bottom: 3px solid #39ff14;
+    box-shadow: 0 3px 0 #1a7a00;
+}
+
+.headerInner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerTitle {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9px;
+    color: #39ff14;
+    letter-spacing: 1px;
+}
+
+.headerRight {
+    display: flex;
+    gap: 10px;
+}
+
+/* ─── Main Layout ─────────────────────── */
+.main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 28px 24px 60px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 480px 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ─── Section Titles ──────────────────── */
+.sectionTitle {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    color: #39ff14;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.countBadge {
+    background: #1a3d15;
+    border: 1.5px solid #39ff14;
+    color: #39ff14;
+    font-size: 8px;
+    padding: 2px 8px;
+}
+
+/* ─── Form ─────────────────────────────── */
+.formSection {
+    background: #12121a;
+    border: 3px solid #39ff14;
+    box-shadow: 4px 4px 0 #1a7a00;
+    padding: 24px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+@media (max-width: 600px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0; /* Prevents overflow */
+}
+
+.fieldGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.fieldRow {
+    display: flex;
+    gap: 12px;
+}
+
+.label {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 7px;
+    color: #39ff14;
+    letter-spacing: 1px;
+}
+
+.input,
+.textarea {
+    background: #050508;
+    border: 2px solid #39ff14;
+    color: #39ff14;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    padding: 10px 12px;
+    outline: none;
+    width: 100%;
+    caret-color: #39ff14;
+    box-shadow: inset 2px 2px 0 rgba(0, 0, 0, 0.6);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: #2a4d22;
+}
+
+.input:focus,
+.textarea:focus {
+    border-color: #ffe000;
+}
+
+.textarea {
+    resize: vertical;
+}
+
+/* Image upload zone */
+.uploadZone {
+    border: 2px dashed #39ff14;
+    background: #050508;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.15s, background 0.15s;
+}
+
+.uploadZone:hover {
+    background: #0a0a14;
+    border-color: #ffe000;
+}
+
+.uploadPlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.uploadIcon {
+    font-size: 32px;
+}
+
+.uploadText {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 7px;
+    color: #39ff14;
+}
+
+.uploadHint {
+    font-family: 'VT323', monospace;
+    font-size: 16px;
+    color: #555;
+}
+
+.previewImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.uploadingOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 7px;
+    color: #ffe000;
+}
+
+/* Color picker */
+.colorPicker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-top: 4px;
+}
+
+.colorSwatch {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #1a1a2e;
+    cursor: pointer;
+    transition: transform 0.1s, border-color 0.1s;
+}
+
+.colorSwatch:hover {
+    transform: scale(1.2);
+}
+
+.colorSwatchActive {
+    border: 2px solid #fff;
+    transform: scale(1.15);
+}
+
+/* Type selector */
+.typeRow {
+    display: flex;
+    gap: 8px;
+}
+
+.typeBtn {
+    flex: 1;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 7px;
+    padding: 8px 6px;
+    border: 2px solid #1a1a2e;
+    color: #555;
+    background: transparent;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s;
+    text-align: center;
+}
+
+.typeBtn:hover {
+    border-color: #39ff14;
+    color: #39ff14;
+}
+
+.typeBtnActive {
+    border-color: #39ff14;
+    color: #39ff14;
+    background: #1a3d15;
+}
+
+/* Card preview */
+.cardPreview {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.previewCard {
+    position: relative;
+    height: 160px;
+    background: #1a1a2e;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.previewNoImg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'VT323', monospace;
+    color: #333;
+    font-size: 18px;
+}
+
+.previewOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 20%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.previewTitle {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    right: 14px;
+    z-index: 2;
+}
+
+.previewLine1 {
+    display: block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.previewLine2 {
+    display: block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+/* Messages */
+.successMsg {
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    color: #39ff14;
+    padding: 8px 12px;
+    border: 2px solid #39ff14;
+    background: #0a1a08;
+}
+
+.errorMsg {
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    color: #ff2d78;
+    padding: 8px 12px;
+    border: 2px solid #ff2d78;
+    background: #1a0008;
+}
+
+/* ─── Buttons ─────────────────────────── */
+.btn {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+    padding: 12px 16px;
+    border: 2px solid;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: transform 0.05s, box-shadow 0.05s;
+    letter-spacing: 1px;
+}
+
+.btn:active {
+    transform: translate(2px, 2px);
+}
+
+.btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.btnGreen {
+    background: #1a3d15;
+    border-color: #39ff14;
+    color: #39ff14;
+    box-shadow: 3px 3px 0 #1a7a00;
+}
+
+.btnGreen:hover:not(:disabled) {
+    background: #2a5c20;
+}
+
+.btnPink {
+    background: #3d0a1e;
+    border-color: #ff2d78;
+    color: #ff2d78;
+    box-shadow: 3px 3px 0 #7a0030;
+}
+
+.btnPink:hover:not(:disabled) {
+    background: #5a1030;
+}
+
+.btnBlue {
+    background: #0d2840;
+    border-color: #00d4ff;
+    color: #00d4ff;
+    box-shadow: 3px 3px 0 #003d7a;
+}
+
+.btnBlue:hover:not(:disabled) {
+    background: #163b5a;
+}
+
+.btnSm {
+    padding: 8px 12px !important;
+    font-size: 7px !important;
+}
+
+/* ─── Prompt List ─────────────────────── */
+.listSection {
+    background: #12121a;
+    border: 3px solid #1a1a2e;
+    padding: 24px;
+}
+
+.loadingMsg,
+.emptyMsg {
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    color: #555;
+    padding: 32px;
+    text-align: center;
+}
+
+.promptList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.promptItem {
+    background: #0a0a14;
+    border: 2px solid #1a1a2e;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 12px;
+    transition: border-color 0.15s;
+}
+
+.promptItem:hover {
+    border-color: #39ff14;
+}
+
+.promptThumb {
+    width: 48px;
+    height: 72px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid #1a1a2e;
+}
+
+.promptMeta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.promptTitle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.promptType {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 6px;
+    color: #555;
+}
+
+.promptSnippet {
+    font-family: 'VT323', monospace;
+    font-size: 15px;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.deleteBtn {
+    flex-shrink: 0;
+}

@@ -1,0 +1,26 @@
+.footer {
+    background: #070710;
+    border-top: 3px solid #1a1a2e;
+    margin-top: 60px;
+}
+
+.inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+@media (max-width: 640px) {
+    .inner {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 12px;
+        padding: 24px 16px;
+    }
+}

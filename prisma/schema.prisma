@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Prompt {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  line1       String
+  line2       String
+  line2Color  String   @default("#ff2d78")
+  type        String   @default("image") // "image" | "video" | "both"
+  aspectRatio String   @default("9:16") // "9:16" | "16:9" | "1:1"
+  prompt      String   @db.Text
+  image       String   // Cloudinary URL
+}
